@@ -1,59 +1,31 @@
-# Seg3502Lab4
+# SEG3502 - Lab 4
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.2.
+**Angular Reactive Forms and Routing**
+
+This project implements the final exercise for SEG3502 Lab 4.
+
+## Requirements
+
+- Reactive contact form with first name, last name, phone number, and email.
+- Form validation and error messages.
+- Navigation to a results page after a valid submission.
+- Display of submitted contact information in a table.
 
 ## Development server
 
-To start a local development server, run:
+Install the dependencies and start the application:
 
 ```bash
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open `http://localhost:4200/` in your browser.
 
-## Code scaffolding
+## Technologies
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Angular
+- TypeScript
+- HTML and CSS
+- Angular Router
+- Reactive Forms
