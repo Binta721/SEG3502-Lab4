@@ -1,0 +1,17 @@
+{
+  "browser": "Microsoft Edge headless",
+  "passed": true,
+  "checks": [
+    "root redirect",
+    "empty form disabled",
+    "valid form enabled",
+    "invalid phones",
+    "invalid email",
+    "required names errors",
+    "exact results",
+    "return",
+    "optional fields empty",
+    "reload without data"
+  ],
+  "pageErrors": []
+}

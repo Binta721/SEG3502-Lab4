@@ -24,13 +24,26 @@ describe('ContactForm', () => {
 
   it('requires both names while allowing empty optional fields', () => {
     const form = component.contactForm;
+    const submit = fixture.nativeElement.querySelector('button[type="submit"]') as HTMLButtonElement;
     expect(form.valid).toBe(false);
+    expect(submit.disabled).toBe(true);
     form.patchValue({ firstName: 'Anne' });
     expect(form.valid).toBe(false);
     form.patchValue({ firstName: '', lastName: 'Roy' });
     expect(form.valid).toBe(false);
     form.patchValue({ firstName: 'Anne' });
+    fixture.detectChanges();
     expect(form.valid).toBe(true);
+    expect(submit.disabled).toBe(false);
+    form.patchValue({ phone: '6130550123' });
+    fixture.detectChanges();
+    expect(submit.disabled).toBe(true);
+    form.patchValue({ phone: '6135550123', email: 'ada@' });
+    fixture.detectChanges();
+    expect(submit.disabled).toBe(true);
+    form.patchValue({ email: 'ada@example.com' });
+    fixture.detectChanges();
+    expect(submit.disabled).toBe(false);
   });
 
   it.each(['0135550123', '6130550123', '613555012', '61355501234', '613555abcd', '613 5550123'])('rejects phone %s', (phone) => {

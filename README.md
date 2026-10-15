@@ -43,7 +43,7 @@ Ouvrir http://localhost:4200/. npm ci installe les versions verrouillées. Aucun
 - Téléphone valide : `6135550123`. Invalides : `0135550123`, `6130550123`, `613555012`.
 - Courriel facultatif, validé avec Validators.email si renseigné.
 
-Une soumission invalide marque les champs comme touchés pour afficher les erreurs, sans transmettre les données ni naviguer. Une soumission valide enregistre les quatre valeurs dans le service avant de naviguer vers /resultat. Les champs facultatifs vides sont enregistrés comme chaînes vides.
+Le bouton Envoyer est désactivé tant que le formulaire est invalide, conformément à la checklist du guide. Les erreurs apparaissent après interaction avec les champs. Si une soumission invalide est déclenchée par programmation, la méthode de soumission marque les champs comme touchés, sans transmettre les données ni naviguer. Une soumission valide enregistre les quatre valeurs dans le service avant de naviguer vers /resultat. Les champs facultatifs vides sont enregistrés comme chaînes vides.
 
 ## Service partagé
 
@@ -95,7 +95,7 @@ Avec une version de Node compatible déjà installée, les commandes ordinaires 
 ### Vérifications manuelles avant remise
 
 1. Démarrer avec npm start ; vérifier la redirection de / vers /formulaire.
-2. Soumettre un formulaire vide : erreurs visibles et aucune navigation.
+2. Vérifier que le bouton Envoyer est désactivé pour un formulaire vide. Entrer dans les champs prénom et nom puis les quitter sans saisie : erreurs visibles et aucune navigation. Renseigner des valeurs valides : le bouton devient actif.
 3. Essayer les téléphones invalides ci-dessus et un courriel comme adresse-invalide.
 4. Soumettre quatre valeurs valides et comparer chaque cellule aux valeurs saisies.
 5. Refaire avec téléphone et courriel vides.
