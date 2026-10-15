@@ -1,0 +1,25 @@
+
+<h2>Résultat du formulaire de contact</h2>
+
+@if (contactData.contact) {
+  <table>
+    <thead>
+      <tr>
+        <th>Prénom</th>
+        <th>Nom</th>
+        <th>Téléphone</th>
+        <th>Courriel</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ contactData.contact.firstName }}</td>
+        <td>{{ contactData.contact.lastName }}</td>
+        <td>{{ contactData.contact.phone }}</td>
+        <td>{{ contactData.contact.email }}</td>
+      </tr>
+    </tbody>
+  </table>
+} @else {
+  <p>Aucune donnée à afficher. Veuillez remplir le formulaire.</p>
+}

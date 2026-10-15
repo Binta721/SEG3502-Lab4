@@ -1,0 +1,51 @@
+
+<h2>Formulaire de contact</h2>
+
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+  <div>
+    <label for="firstName">Prénom :</label>
+    <input id="firstName" type="text" formControlName="firstName">
+
+    @if (contactForm.controls.firstName.touched &&
+         contactForm.controls.firstName.hasError('required')) {
+      <p class="error">Le prénom est obligatoire.</p>
+    }
+  </div>
+
+  <div>
+    <label for="lastName">Nom :</label>
+    <input id="lastName" type="text" formControlName="lastName">
+
+    @if (contactForm.controls.lastName.touched &&
+         contactForm.controls.lastName.hasError('required')) {
+      <p class="error">Le nom est obligatoire.</p>
+    }
+  </div>
+
+  <div>
+    <label for="phone">Téléphone :</label>
+    <input id="phone" type="tel" formControlName="phone">
+
+    @if (contactForm.controls.phone.touched &&
+         contactForm.controls.phone.hasError('pattern')) {
+      <p class="error">
+        Le téléphone doit contenir 10 chiffres, avec un premier
+        et un quatrième chiffre différents de zéro.
+      </p>
+    }
+  </div>
+
+  <div>
+    <label for="email">Courriel :</label>
+    <input id="email" type="email" formControlName="email">
+
+    @if (contactForm.controls.email.touched &&
+         contactForm.controls.email.hasError('email')) {
+      <p class="error">Veuillez saisir un courriel valide.</p>
+    }
+  </div>
+
+  <button type="submit">Envoyer</button>
+
+</form>
