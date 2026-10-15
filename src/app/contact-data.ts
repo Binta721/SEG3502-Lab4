@@ -1,26 +1,17 @@
 import { Injectable } from '@angular/core';
+import { Contact } from './contact';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactData {
-  contact: {
-    firstName: string;
-    lastName: string;
-    phone: string;
-    email: string;
-  } | null = null;
+  private contact: Contact | null = null;
 
-  setContact(data: {
-    firstName: string;
-    lastName: string;
-    phone: string;
-    email: string;
-  }): void {
+  setContact(data: Contact): void {
     this.contact = data;
   }
 
-  getContact() {
+  getContact(): Contact | null {
     return this.contact;
   }
 }

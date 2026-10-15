@@ -1,25 +1,30 @@
 
 <h2>Résultat du formulaire de contact</h2>
 
-@if (contactData.contact) {
-  <table>
-    <thead>
-      <tr>
-        <th>Prénom</th>
-        <th>Nom</th>
-        <th>Téléphone</th>
-        <th>Courriel</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>{{ contactData.contact.firstName }}</td>
-        <td>{{ contactData.contact.lastName }}</td>
-        <td>{{ contactData.contact.phone }}</td>
-        <td>{{ contactData.contact.email }}</td>
-      </tr>
-    </tbody>
-  </table>
+@if (contact) {
+  <div class="table-container">
+    <table>
+      <caption>Coordonnées soumises</caption>
+      <thead>
+        <tr>
+          <th scope="col">Prénom</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Téléphone</th>
+          <th scope="col">Courriel</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ contact.firstName }}</td>
+          <td>{{ contact.lastName }}</td>
+          <td>{{ contact.phone }}</td>
+          <td>{{ contact.email }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 } @else {
   <p>Aucune donnée à afficher. Veuillez remplir le formulaire.</p>
 }
+
+<button type="button" class="return-link" routerLink="/formulaire">Retour au formulaire</button>

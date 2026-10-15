@@ -1,4 +1,41 @@
 
+:host {
+  display: block;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+caption {
+  text-align: left;
+  padding-bottom: 12px;
+}
+
+td {
+  overflow-wrap: anywhere;
+}
+
+.return-link {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 11px 20px;
+  background-color: #2864a5;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+
+.return-link:focus-visible {
+  outline: 3px solid #243047;
+  outline-offset: 3px;
+}
+
 h2 {
   color: #285f9e;
   font-family: Arial, sans-serif;
